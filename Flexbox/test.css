@@ -1,9 +1,25 @@
-.section {
-  font-size: 3rem;
-  color: red;
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 2px solid black;
+  height: 100vh;
+  width: 20%;
 }
 
-#non-section {
-  font-size: 1.5rem;
-  color: blue;
+.child {
+  font-size: 5rem;
+  border: 1px solid red;
+  padding: 5%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.test {
+  order: 5;
+  flex-grow: 1;
+  flex-shrink: 4;
+  align-self: flex-start;
 }

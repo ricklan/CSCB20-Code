@@ -3,40 +3,15 @@
   <head>
     <!-- Linking to an external CSS file -->
     <link rel="stylesheet" href="./test.css" />
-
-    <!-- Linking to an external JS file -->
-    <script src="./test.js"></script>
-
-    <!-- Embedded JS -->
-    <script>
-      console.log("1");
-    </script>
-
-    <!-- Embedded CSS -->
-    <!-- <style>
-      body {
-        background-color: yellow;
-      }
-    </style> -->
   </head>
 
   <body>
-    <div class="section">
-      <p id="non-section">Hi World</p>
+    <div class="parent">
+      <p class="child">1</p>
+      <p class="child test">2</p>
+      <p class="child">3</p>
+      <p class="child">4</p>
+      <p class="child">5</p>
     </div>
-
-    <!-- Empty tag -->
-    <br />
-
-    <!-- Inline CSS -->
-    <p id="non-section" style="text-align: center">
-      Hi <span class="section"> World </span>
-      <span>2</span>
-    </p>
-
-    <!-- Embedded JS -->
-    <script>
-      console.log("2");
-    </script>
   </body>
 </html>
