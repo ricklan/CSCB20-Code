@@ -1,9 +1,35 @@
-.section {
-  font-size: 3rem;
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-#non-section {
-  font-size: 1.5rem;
-  color: blue;
+.parent {
+  display: flex;
+}
+
+.child {
+  font-size: 10rem;
+  border: 1px solid red;
+  padding: 5%;
+  background-color: blue;
+}
+
+/* width is 400px or smaller */
+@media only screen and (max-width: 400px) {
+  .child {
+    font-size: 2rem;
+    border: 1px solid red;
+    padding: 5%;
+    background-color: yellow;
+  }
+}
+
+/* width is 800px or bigger */
+@media only screen and (min-width: 800px) {
+  .child {
+    font-size: 15rem;
+    border: 1px solid red;
+    padding: 5%;
+    background-color: green;
+  }
 }
