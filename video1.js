@@ -1,3 +1,5 @@
+// Going over basic JS examples
+
 // This is a comment
 
 /* 
