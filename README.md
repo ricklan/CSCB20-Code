@@ -6,5 +6,4 @@ The branches are:
 2. Intro to CSS   - https://github.com/ricklan/CSCB20-Code/tree/Intro-to-CSS
 3. Advanced CSS   - https://github.com/ricklan/CSCB20-Code/tree/Advanced-CSS
 4. Intro to JS    - https://github.com/ricklan/CSCB20-Code/tree/Intro-to-JS
-5. Backend (Not created yet)
-6. Integrating frontend to backend (Not created yet)
+5. Backend        - https://github.com/ricklan/CSCB20-Code/tree/backend
