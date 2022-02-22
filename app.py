@@ -99,12 +99,8 @@ def index():
 def home():
     if "user" not in session:
         abort(403, "You are not allowed access")
-    firstname = None
-    lastname = None
-    print(1)
     with sqlite3.connect("database.db") as con:
         cur = con.cursor()
-        print(2)
         rows = cur.execute(
             "SELECT firstname, lastname FROM User WHERE username = (?)",
             (session["user"],),
