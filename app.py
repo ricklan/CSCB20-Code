@@ -85,8 +85,6 @@ def signup():
             flash("User successfully added")
         except sqlite3.IntegrityError as err:
             flash("That username already exists. Please choose a new one.")
-        except:
-            flash("The username and/or password is invalid")
     return render_template("signup.html")
 
 
