@@ -51,8 +51,8 @@ def login():
             else:
                 session["user"] = username
                 return redirect(url_for("home"))
-    elif request.method == "GET":
-        return render_template("login.html")
+
+    return render_template("login.html")
 
 
 @app.route("/api/signup", methods=["GET", "POST"])
