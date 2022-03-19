@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <!-- Prints the error message. -->
-    {% with error_message = get_flashed_messages() %} {% if error_message %}
-    <!-- Loops through the error messages. -->
-    {% for error in error_message %}
-    <p>{{ error }}</p>
-    {% endfor %} {% endif %} {% endwith %}
-
     <!-- Lets the user log in. -->
     <div>
       <h1>Log in</h1>
