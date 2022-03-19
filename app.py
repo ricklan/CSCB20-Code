@@ -9,12 +9,8 @@ from flask import (
     flash,
 )
 import sqlite3
-import os
 
-project_root = os.path.dirname(__file__)
-template_path = os.path.join(project_root, "./templates")
-
-app = Flask(__name__, template_folder=template_path)
+app = Flask(__name__, template_folder="./templates")
 conn = sqlite3.connect("database.db")
 
 # Creates the User table
