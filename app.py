@@ -93,7 +93,7 @@ def signup():
 
 @app.route("/")
 def index():
-    return redirect(url_for("login"))
+    return "Hi world"
 
 
 @app.route("/home")
