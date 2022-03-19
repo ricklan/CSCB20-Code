@@ -1,30 +1,7 @@
-from flask import (
-    Flask,
-    redirect,
-    render_template,
-    request,
-    url_for,
-    session,
-    abort,
-    flash,
-)
+from flask import Flask, render_template, url_for
 import sqlite3
 
-app = Flask(__name__, template_folder="./templates")
-conn = sqlite3.connect("database.db")
-
-# Creates the User table
-conn.execute(
-    """
-    CREATE TABLE IF NOT EXISTS User 
-    (
-        username TEXT PRIMARY KEY, 
-        password TEXT, 
-        firstName TEXT, 
-        lastName TEXT
-    )
-    """
-)
+app = Flask(__name__, template_folder="templates")
 
 
 @app.route("/")
