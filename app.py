@@ -11,6 +11,7 @@ from flask import (
 import sqlite3
 
 app = Flask(__name__, template_folder="templates")
+app.secret_key = b"secretkey"
 conn = sqlite3.connect("database.db")
 
 # Creates the User table
@@ -108,4 +109,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    app.secret_key = b"secretkey"
