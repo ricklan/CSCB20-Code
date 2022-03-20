@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    {% with return_message = get_flashed_messages() %} {% if return_message %}
-    {% for message in return_message %} {% if message == "User successfully
-    added" %}
-    <p>
-      {{ message }} Click <a href="{{url_for('login')}}"> here </a> to login.
-    </p>
-    {% else %}
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %}
     <p>{{ message }}</p>
-    {% endif %} {% endfor %} {% endif %} {% endwith %}
+    {% endfor %} {% endif %} {% endwith %}
 
     <!-- Lets the user create a new account. -->
     <div>
@@ -56,6 +51,11 @@
         <!-- Creates a submit button -->
         <input type="submit" value="Submit" />
       </form>
+    </div>
+
+    <div>
+      <h1>Login</h1>
+      <a href="{{url_for('login')}}"><button>Login</button> </a>
     </div>
   </body>
 </html>
