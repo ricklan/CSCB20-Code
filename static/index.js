@@ -23,6 +23,7 @@ window.onload = function () {
     // If successful, we create table rows to add the first name, last name and delete button
     if (result.status === 200) {
       for (let row of result.data) {
+        console.log("Row", row);
         // Creates the row
         let tr = document.createElement("tr");
 
