@@ -23,19 +23,16 @@ window.onload = function () {
     // If successful, we create table rows to add the first name, last name and delete button
     if (result.status === 200) {
       for (let row of result.data) {
-        console.log("Row", row);
         // Creates the row
         let tr = document.createElement("tr");
 
         // Creates the th for firstname
         let firstname = row["firstname"];
-        console.log(firstname, row["firstname"]);
         let firstname_th = document.createElement("th");
         firstname_th.innerHTML = firstname;
 
         //  Creates the th for lastname
         let lastname = row["lastname"];
-        console.log(lastname, row["lastname"]);
         tr.appendChild(firstname_th);
         let lastname_th = document.createElement("th");
         lastname_th.innerHTML = lastname;
@@ -45,10 +42,8 @@ window.onload = function () {
         let deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete User";
 
-        console.log("Outside delete button", firstname, lastname);
-
-        deleteButton.addEventListener("click", function (e) {
-          console.log("In delete button", firstname, lastname);
+        // Creates event listener for clicking on the delete button
+        deleteButton.addEventListener("click", function () {
           deleteUsers(firstname, lastname).then(function (result) {
             if (result.status === 200) {
               location.reload();
