@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flask Example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="{{ url_for('static', filename='index.css') }}"
-      rel="stylesheet"
-    />
-    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <script src="../static/index.js"></script>
+
+    <!-- CDN for Axios library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
-    <p id="title">Welcome to your homepage {{firstname}} {{lastname}}</p>
+    <h1>Add User</h1>
+
+    <form id="form">
+      <input type="text" , placeholder="firstname" id="fname" required />
+      <input type="text" , placeholder="lastname" id="lname" required /><br />
+      <input type="submit" value="submit" />
+    </form>
+
+    <h1>List of Users</h1>
+
+    <table id="list">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Delete</th>
+      </tr>
+    </table>
   </body>
 </html>
