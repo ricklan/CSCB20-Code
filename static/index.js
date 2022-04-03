@@ -29,11 +29,13 @@ window.onload = function () {
 
         // Creates the th for firstname
         let firstname = row["firstName"];
+        console.log(firstname, row["firstName"]);
         let firstname_th = document.createElement("th");
         firstname_th.innerHTML = firstname;
 
         //  Creates the th for lastname
         let lastname = row["lastName"];
+        console.log(lastname, row["lastname"]);
         tr.appendChild(firstname_th);
         let lastname_th = document.createElement("th");
         lastname_th.innerHTML = lastname;
