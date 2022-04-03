@@ -42,7 +42,10 @@ window.onload = function () {
         let deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete User";
 
+        console.log("Outside delete button", firstname, lastname);
+
         deleteButton.addEventListener("click", function (e) {
+          console.log("In delete button", firstname, lastname);
           deleteUsers(firstname, lastname).then(function (result) {
             if (result.status === 200) {
               location.reload();
